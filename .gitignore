@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pyc
+earnit/data/
+.streamlit/secrets.toml
+.claude/settings.local.json
