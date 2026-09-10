@@ -11,7 +11,11 @@ to click through the app.
 import re
 from datetime import date as date_cls, timedelta
 
-from . import storage
+try:
+    from earnit import storage
+except ImportError:
+    # allows `streamlit run app.py` to work when run from inside earnit/ too
+    import storage
 
 XP_PER_LEVEL = 100
 ACHIEVEMENT_XP = 5
