@@ -14,6 +14,7 @@ walks you through creating the first (admin) one.
 """
 
 from datetime import date, datetime
+from pathlib import Path
 
 import streamlit as st
 
@@ -25,7 +26,9 @@ except ImportError:
     import mailer
     import storage
 
-st.set_page_config(page_title="EarnIt", page_icon="⭐")
+ICON_PATH = Path(__file__).parent / "star_icon.png"
+
+st.set_page_config(page_title="EarnIt", page_icon=str(ICON_PATH))
 
 
 def save():
